@@ -3,6 +3,6 @@ My first card game (and roguelike). I write game code only in Pygame (without Go
 
 FAILS:
 
-GameCard.py has a class of the Card for Main.py
+GameCard.py -- has a class of the Card for Main.py
 
-ofont.ru_EE-Bellflower.ttf is just a font
+ofont.ru_EE-Bellflower.ttf -- is just a font
