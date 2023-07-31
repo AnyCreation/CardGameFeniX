@@ -28,6 +28,7 @@ while True:
     C = GC.Card(dis, 1, AW, [Attact, power], pygame.mouse.get_pos())
     
     C.Update()
+    Me = C.Output_Signal_Of_The_Move()
 
     pygame.draw.rect(dis, (0, 0, 0), ZONE, 2)
 
@@ -43,8 +44,9 @@ while True:
             pygame.quit()
 
         if event.type == pygame.MOUSEBUTTONDOWN:
-            S = True
-        if event.type == pygame.MOUSEBUTTONUP:
+            if Me[0] and Me[1]:
+                S = True
+        elif event.type == pygame.MOUSEBUTTONUP:
             S = False
 
     pygame.display.update()
