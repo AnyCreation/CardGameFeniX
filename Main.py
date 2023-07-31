@@ -17,7 +17,7 @@ for Row in range(2):
 
 AW = (w / 2, h / 2)
 Attact = random.randint(1, 9)
-power = POWER_LIST[random.randint(1, len(POWER_LIST) - 1)]
+power = POWER_LIST[random.randint(0, len(POWER_LIST) - 1)]
 S = False
 
 
