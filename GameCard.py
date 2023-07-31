@@ -49,7 +49,7 @@ class Card:
     @classmethod
     def INFO(cls, RECT_CARD, MOUSEPOS):  # Info of the power!!!!!!
         X = RECT_CARD[0] <= MOUSEPOS[0] <= RECT_CARD[0] + RECT_CARD[2]
-        Y = RECT_CARD[1] +я RECT_CARD[3] / 2 <= MOUSEPOS[1] <= RECT_CARD[1] + RECT_CARD[3]
+        Y = RECT_CARD[1] + RECT_CARD[3] / 2 <= MOUSEPOS[1] <= RECT_CARD[1] + RECT_CARD[3]
 
         return X, Y
 
