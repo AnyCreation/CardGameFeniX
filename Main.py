@@ -1,5 +1,7 @@
 import GameCard as GC
+import ListCard as LC
 import pygame
+import random
 
 w, h = 1200, 900
 dis = pygame.display.set_mode((w, h))
@@ -7,8 +9,11 @@ dis = pygame.display.set_mode((w, h))
 AW = (w / 2, h / 2)
 S = False
 
+""" Create Power and Attact for Cards """
+Keys = LC.Cards.keys()
+Cards = LC.Cards[list(Keys)[random.randint(0, len(Keys) - 1)]]
+Attact, power = Cards[random.randint(0, len(Cards) - 1)]
 
-ZONE = pygame.Rect(100, 100, 120, 170)
 
 while True:
     dis.fill('white')
@@ -16,12 +21,6 @@ while True:
     
     C.Update()
     Me = C.Output_Signal_Of_The_Move()
-
-    pygame.draw.rect(dis, (0, 0, 0), ZONE, 2)
-
-    is_hit = pygame.Rect.colliderect(ZONE, C.Down)
-    if is_hit:
-        print(C.AIN_EDIT)
 
     if S:
         AW = pygame.mouse.get_pos()
