@@ -1,23 +1,10 @@
 import GameCard as GC
 import pygame
-import random
 
 w, h = 1200, 900
 dis = pygame.display.set_mode((w, h))
 
-POWER_LIST = ["Кровотечение", "Отравление"]
-
-W = []
-for Row in range(2):
-    Line = []
-    for Coll in range(4):
-        Line.append([])
-    W.append(Line)
-
-
 AW = (w / 2, h / 2)
-Attact = random.randint(1, 9)
-power = POWER_LIST[random.randint(0, len(POWER_LIST) - 1)]
 S = False
 
 
