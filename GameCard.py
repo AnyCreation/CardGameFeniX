@@ -5,7 +5,7 @@ pygame.font.init()
 
 class Card:
 
-    def __init__(self, WINDOW, MINA, CENTER, AIN_EDIT, POSMOUSE):
+    def __init__(self, WINDOW, MINA, CENTER, AIN_EDIT, POSMOUSE):  # __init__!!!!!!
         self.WINDOW = WINDOW
         self.x, self.y = CENTER
         self.AIN_EDIT = AIN_EDIT
@@ -58,12 +58,12 @@ class Card:
 
         return X, Y
 
-    def Output_Signal_Of_The_Move(self):
+    def Output_Signal_Of_The_Move(self):  # For Move Card!!!!!!
         Output = self.INFO(self.Down, self.POSMOUSE, 0)
 
         return Output
 
-    def Update(self):
+    def Update(self):   # Create, Write and there of the Card!!!!!!
 
         """ Create Card on WINDOW """
         pygame.draw.rect(self.WINDOW, (184, 184, 184), self.Down)
