@@ -8,31 +8,29 @@ dis = pygame.display.set_mode((w, h))
 
 AW = (w / 2, h / 2)
 S = False
+M = False
 
 """ Create Power and Attact for Cards """
 Keys = LC.Cards.keys()
 Cards = LC.Cards[list(Keys)[random.randint(0, len(Keys) - 1)]]
 Attact, power = Cards[random.randint(0, len(Cards) - 1)]
 
+""" Inventory """
+Limit_has_Cards = [0, 0, 0]
+Cards_In_Place = []
 
 while True:
     dis.fill('white')
-    C = GC.Card(dis, 1, AW, [Attact, power], pygame.mouse.get_pos())
-    
-    C.Update()
-    Me = C.Output_Signal_Of_The_Move()
-
-    if S:
-        AW = pygame.mouse.get_pos()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
 
         if event.type == pygame.MOUSEBUTTONDOWN:
-            if Me[0] and Me[1]:
-                S = True
+            S = True
         elif event.type == pygame.MOUSEBUTTONUP:
             S = False
+
+
 
     pygame.display.update()
